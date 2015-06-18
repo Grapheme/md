@@ -1,0 +1,12 @@
+.black-btn {
+	height: 40rem / $fs;
+	border: none;
+	background: #111;
+	color: #fff;
+	font-size: 14px;
+	padding: 0 50rem / $fs;
+
+	&:hover {
+		background: #333;
+	}
+}

@@ -1,0 +1,50 @@
+doctype html
+- var title = 'MD'
+
+block vars 
+    
+html.no-js(lang="")
+  head
+    meta(charset="utf-8")
+    meta(name="description", content="")
+    //- meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
+    title #{title}
+    // Place favicon.ico and apple-touch-icon.png in the root directory
+    // build:css styles/main.css
+    link(rel="stylesheet", href="styles/vendor.css")
+    link(rel="stylesheet", href="styles/main.css")
+    // endbuild
+    // build:js scripts/vendor/modernizr.js
+    // endbuild
+  body
+    header.header
+      .header__top
+        .wrapper
+          a(href="#").top__logo
+          nav.top__left
+            a(href="#").left__link Найти магазин
+            a(href="#").left__link Служба поддержки
+            a(href="#").left__link Подписка на новости
+          .top__right
+            a(href="#").right__link Войти
+            span.right__line
+            a(href="#").right__link Моя корзина
+            .right__cart
+              span.cart__icon
+              span.cart__count 5
+      .header__bottom
+        .wrapper
+          .bottom__left
+            each i in [{'n':'Женщины', 'l':'#'},{'n':'Мужчины', 'l':'#'},{'n':'Дети', 'l':'#'},{'n':'Молодежь', 'l':'#'},{'n':'LookBook', 'l':'#'}]
+              a(href="#{i.l}").left__link #{i.n}
+            a(href="#").left__link.blue-link ModisBonus
+            a(href="#").left__link.red-link Распродажа
+          .bottom__right
+            a(href="#").search-link
+              span.link__text Поиск
+              span.link__icon
+    block content
+    footer
+
+    script(src="scripts/main.concat.js")
+    block scripts

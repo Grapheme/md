@@ -1,0 +1,59 @@
+extends templates/layout
+
+block content
+    .main-metro
+        .wrapper
+            .wrapper-cont
+                .metro__grid.grid-2.metro-center
+                    .metro-cont(style="background-image: url(images/tmp/metro-1.jpg);")
+                        .metro__top Женская коллекция лето 2015
+                        .metro__title Сафари Парк
+                        .metro__desc Летние образы и купальные костюмы для<br>нового сезона отпусков
+                .metro__grid.grid-1.metro-promo
+                    .metro-cont(style="background-image: url(images/tmp/metro-2.jpg);")
+                        .metro__promo-text Ты можешь позволить себе большее
+                        .metro__promo-tag #<b>Modis</b>Bonus
+                .metro__grid.grid-1
+                    .metro-cont(style="background-image: url(images/tmp/metro-3.jpg);")
+                        .metro__top Мужская коллекция<br>лето 2015
+                        .metro__title Бархатный<br>сезон
+                .metro__grid.grid-1
+                    .metro-cont(style="background-image: url(images/tmp/metro-4.jpg);")
+                        .metro__top Lookbook
+                        .metro__title Летний<br>отдых
+                .metro__grid.grid-1
+                    .metro-cont(style="background-image: url(images/tmp/metro-5.jpg);")
+                        .metro__top Звезда
+                        .metro__title Аврора<br>специально<br>для Modis
+                .clearfix
+    .popular-line
+        span Популярные категории
+    .popular-list
+        .wrapper
+            .wrapper-cont
+                .list__item
+                    a(href="#").item__image(style="background-image: url(images/tmp/popular-1.jpg);")
+                    a(href="#").item__title Аксессуары
+                .list__item
+                    a(href="#").item__image(style="background-image: url(images/tmp/popular-2.jpg);")
+                    a(href="#").item__title Деним
+                .list__item
+                    a(href="#").item__image(style="background-image: url(images/tmp/popular-3.jpg);")
+                    a(href="#").item__title Футболки
+                .list__item
+                    a(href="#").item__image(style="background-image: url(images/tmp/popular-4.jpg);")
+                    a(href="#").item__title Платья
+                .list__item
+                    a(href="#").item__image(style="background-image: url(images/tmp/popular-5.jpg);")
+                    a(href="#").item__title Базовые модели
+                .list__item
+                    a(href="#").item__image(style="background-image: url(images/tmp/popular-6.jpg);")
+                    a(href="#").item__title Рубашки
+                .clearfix
+    .news-delivery
+        .delivery__title Новостная рассылка
+        .delivery__desc Узнавай о последних модных трендах и специальных предложениях.
+        .delivery__form
+            form
+                input.form__input(placeholder="Введите Ваш е-мейл")
+                button(type="submit").black-btn Подписаться

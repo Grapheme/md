@@ -7,7 +7,7 @@ html.no-js(lang="")
   head
     meta(charset="utf-8")
     meta(name="description", content="")
-    //- meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
+    meta(name="viewport", content="width=device-width, initial-scale=1, minimal-ui")
     title #{title}
     // Place favicon.ico and apple-touch-icon.png in the root directory
     // build:css styles/main.css
@@ -20,7 +20,10 @@ html.no-js(lang="")
     header.header
       .header__top
         .wrapper
+          a(href="#").top__menu-icon.js-mobile-menu-show
+            span
           a(href="#").top__logo
+          a(href="#").top__logo-mobile
           nav.top__left
             a(href="#").left__link Найти магазин
             a(href="#").left__link Служба поддержки
@@ -28,23 +31,103 @@ html.no-js(lang="")
           .top__right
             a(href="#").right__link Войти
             span.right__line
-            a(href="#").right__link Моя корзина
+            a(href="#").right__link.link-cart Моя корзина
             .right__cart
               span.cart__icon
               span.cart__count 5
-      .header__bottom
+      .header__bottom.js-mobile-menu
         .wrapper
+          .bottom__mobile.mobile-show
+            .mobile__top
+              a(href="#").top__left Главная
+              span.top__right
+                a(href="#").right__link Войти
+                a(href="#").right__close.js-mobile-menu-hide
+                  i.svg-icon.icon-cross
+            .mobile__search
+              input(placeholder="Поиск")
           .bottom__left
             each i in [{'n':'Женщины', 'l':'#'},{'n':'Мужчины', 'l':'#'},{'n':'Дети', 'l':'#'},{'n':'Молодежь', 'l':'#'},{'n':'LookBook', 'l':'#'}]
               a(href="#{i.l}").left__link #{i.n}
             a(href="#").left__link.blue-link ModisBonus
             a(href="#").left__link.red-link Распродажа
+            a(href="#").left__link.mobile-show Подписка на новости
+            a(href="#").left__link.mobile-show Служба поддержки
+            a(href="#").left__link.mobile-show Найти магазин
+            a(href="#").left__link.mobile-show Мой кабинет
+            a(href="#").left__link.mobile-show Моя корзина
           .bottom__right
             a(href="#").search-link
               span.link__text Поиск
               span.link__icon
     block content
-    footer
+    footer.footer
+      .wrapper
+        .footer__blocks
+          .blocks__item
+            .item__title Компания
+            ul.item__links
+              li
+                a(href="#") Сеть магазинов
+              li
+                a(href="#") Карьера с MODIS
+              li
+                a(href="#") Корпоративная информация
+              li
+                a(href="#") Корпоративная отвесвенность
+              li
+                a(href="#") Пресса
+              li
+                a(href="#") Отношения с инвесторами
+          .blocks__item
+            .item__title ПОМОЩЬ
+            ul.item__links
+              li
+                a(href="#") Служба поддержки
+              li
+                a(href="#") Личный кабинет
+              li
+                a(href="#") Юридическая информация 
+              li
+                a(href="#") Конфидеренциальность
+              li
+                a(href="#") Часто задаваемые вопросы
+              li
+                a(href="#") О файлах Cookie
+          .blocks__item
+            .item__title МОБИЛЬНОЕ ПРИЛОЖЕНИЕ
+            ul.item__links
+              li
+                a(href="#") MODIS для iPhone
+              li
+                a(href="#") MODIS для Android
+            .item__title MODIS В СОЦСЕТЯХ
+            ul.item__socials
+              li
+                a(href="#").socials__item
+                  .svg-icon.icon-fb
+              li
+                a(href="#").socials__item
+                  .svg-icon.icon-ok
+              li
+                a(href="#").socials__item
+                  .svg-icon.icon-pn
+              li
+                a(href="#").socials__item
+                  .svg-icon.icon-in
+              li
+                a(href="#").socials__item
+                  .svg-icon.icon-vk
+          .blocks__item
+            .item__title СПОСОБЫ ОПЛАТЫ
+            .item__desc Вы можете оплатить покупки наличными при получении, либо выбрать другой <a href="#">способ оплаты</a>:
+            .item__desc
+              a(href="#").icon-visa
+              a(href="#").icon-mc
+          .clearfix
+      .footer__bottom
+        .wrapper
+          span © 2015, MODIS, Все права защищены.
 
     script(src="scripts/main.concat.js")
     block scripts

@@ -1,0 +1,96 @@
+.footer {
+	.footer__blocks {
+		position: relative;
+		padding-bottom: 40rem / $fs;
+
+		.blocks__item {
+			float: left;
+			width: 25%;
+
+			.item__title {
+				margin-top: 45rem / $fs;
+				font-size: 12rem / $fs;
+				font-weight: 700;
+				text-transform: uppercase;
+			}
+
+			.item__links {
+				margin: 20rem / $fs 0 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+					line-height: 30rem / $fs;
+
+					a {
+						font-size: 14rem / $fs;
+						color: #333333;
+						text-decoration: none;
+					}
+				}
+			}
+
+			.item__desc {
+				margin: 20rem / $fs 0 0;
+				font-size: 14px;
+				color: #333333;
+				line-height: 1.4;
+
+				a {
+					color: #009fcd;
+					text-decoration: none;
+				}
+			}
+
+			.item__socials {
+				margin: 20rem / $fs 0 0;
+				padding: 0;
+				list-style: none;
+
+				li {
+					display: inline-block;
+					vertical-align: middle;
+					margin-right: 10rem / $fs;
+				}
+
+				.socials__item {
+					color: #aaaaaa;
+					text-decoration: none;
+					font-size: 25rem / $fs;
+
+					&:hover {
+						color: #111;
+					}
+				}
+			}
+		}
+
+		.icon-visa, .icon-mc {
+			display: inline-block;
+			vertical-align: middle;
+			margin-right: 10rem / $fs;
+		}
+
+		.icon-visa {
+			width: 53rem / $fs;
+			height: 16rem / $fs;
+			background: url(../images/footer/visa.png) 0 0 / 100% auto no-repeat;
+		}
+
+		.icon-mc {
+			width: 42rem / $fs;
+			height: 24rem / $fs;
+			background: url(../images/footer/mc.png) 0 0 / 100% auto no-repeat;
+		}
+	}
+
+	.footer__bottom {
+		border-top: 1px solid $borderColor;
+		text-align: center;
+		padding: 20rem / $fs 0 55rem / $fs;
+
+		span {
+			font-size: 12rem / $fs;
+		}
+	}
+}

@@ -1,5 +1,7 @@
 $fs: 16;
-$maxWidth: 1280px;
-$minWidth: 0;
-$padleftright: 20px;
+$maxWidth: 1280rem / $fs;
+$minWidth: 320px;
+$padleftright: 20rem / $fs;
 $borderColor: #eeeeee;
+$mediaMobile: only screen and(max-width: 800px);
+$mediaExMobile: only screen and(min-width: 800px);

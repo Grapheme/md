@@ -13,6 +13,7 @@ html {
     padding: 0 $padleftright;
     min-width: $minWidth;
     max-width: $maxWidth;
+    box-sizing: border-box;
 }
 
 .clearfix:after {

@@ -1,5 +1,6 @@
 .header {
 	.header__top {
+		position: relative;
 		height: 90rem / $fs;
 		line-height: 90rem / $fs;
 		border-bottom: 1px solid $borderColor;
@@ -10,6 +11,56 @@
 			width: 156rem / $fs;
 			height: 58rem / $fs;
 			background: url(../images/header/logo.png) 0 0 / 100% auto no-repeat;
+		}
+
+		.top__logo-mobile {
+			display: none;
+			position: absolute;
+			top: 0;
+			left: 50%;
+			margin-left: -18rem / $fs;
+			width: 36rem / $fs;
+			height: 36rem / $fs;
+			background: url(../images/header/mobile-logo.png) 0 0 / 100% auto no-repeat;
+		}
+
+		.top__menu-icon {
+			display: none;
+			position: absolute;
+			left: 0;
+			top: 0;
+			bottom: 0;
+			width: 40rem / $fs;
+
+			span {
+				position: absolute;
+				display: inline-block;
+				top: 50%;
+				left: 50%;
+				margin-top: -1px;
+				margin-left: -12px;
+				height: 2px;
+				width: 24px;
+				background: #111;
+
+				&:before, &:after {
+					content: "";
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: #111;
+				}
+
+				&:before {
+					transform: translateY(-350%);
+				}
+
+				&:after {
+					transform: translateY(350%);
+				}
+			}
 		}
 
 		.top__left {
@@ -76,6 +127,75 @@
 
 		.wrapper {
 			position: relative
+		}
+
+		.bottom__mobile {
+			.mobile__top {
+				height: 62px;
+				line-height: 62rem / $fs;
+				padding-left: 15rem / $fs;
+
+				.top__left {
+					display: inline-block;
+					vertical-align: middle;
+					font-size: 12rem / $fs;
+					color: inherit;
+					text-transform: uppercase;
+					text-decoration: none;
+				}
+
+				.top__right {
+					float: right;
+
+					.right__link {
+						font-size: 12rem / $fs;
+						text-decoration: none;
+						color: inherit;
+						margin-right: 25rem / $fs;
+					}
+
+					.right__close {
+						display: inline-block;
+						vertical-align: middle;
+						font-size: 25rem / $fs;
+						color: #999;
+						text-decoration: none;
+					}
+				}
+			}
+
+			.mobile__search {
+				line-height: normal;
+				margin-bottom: 20rem / $fs;
+
+				input {
+					background: transparent;
+					font-size: 12rem / $fs;
+					width: 100%;
+					box-sizing: border-box;
+					border: 1px solid $borderColor;
+					outline: none;
+					height: 35rem / $fs;
+					padding: 0 15rem / $fs;
+
+					&::-webkit-input-placeholder {
+						color: #111;
+						font-weight: 500;
+					}
+					&::-moz-placeholder          {
+						color: #111;
+						font-weight: 500;
+					}
+					&:-moz-placeholder           {
+						color: #111;
+						font-weight: 500;
+					}
+					&:-ms-input-placeholder      {
+						color: #111;
+						font-weight: 500;
+					}
+				}
+			}
 		}
 
 		.bottom__left {

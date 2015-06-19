@@ -9,7 +9,8 @@ var gulp = require('gulp'),
 	sass = require('gulp-sass'),
 	gulpIgnore = require('gulp-ignore'),
 	wiredep = require('wiredep').stream,
-	concat = require('gulp-concat');
+	concat = require('gulp-concat'),
+	prefix = require('gulp-autoprefixer');
 	 
 var build_path = './build';
 var app_path = './src';
@@ -68,6 +69,7 @@ gulp.task('jade', function() {
 gulp.task('sass', function () {
 	gulp.src(app_path + '/styles/main.scss')
 		.pipe(sass.sync().on('error', sass.logError))
+		.pipe(prefix("last 3 version", "> 1%", "ie 8", "ie 7"))
 		.pipe(gulp.dest(build_path + '/styles'))
 		.pipe(connect.reload());
 });

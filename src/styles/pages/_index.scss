@@ -1,6 +1,10 @@
 .main-metro {
 	padding: 30rem / $fs 0;
 
+	.wrapper {
+		overflow: hidden;
+	}
+
 	.wrapper-cont {
 		margin: -4rem / $fs;
 	}
@@ -20,14 +24,16 @@
 		}
 
 		&.metro-center {
-			text-align: center;
+			@media #{$mediaExMobile} {
+				text-align: center;
 
-			.metro-cont {
-				padding-top: 13%;
-			}
+				.metro-cont {
+					padding-top: 13%;
+				}
 
-			.metro__title {
-				font-size: 80rem / $fs;
+				.metro__title {
+					font-size: 80rem / $fs;
+				}
 			}
 		}
 
@@ -66,6 +72,10 @@
 				text-transform: uppercase;
 				line-height: 1.2;
 			}
+		}
+
+		@media #{$mediaMobile} {
+			width: 100% !important;
 		}
 
 		.metro-cont {
@@ -141,7 +151,7 @@
 
 	.list__item {
 		display: inline-block;
-		width: 188rem / $fs;
+		width: 181rem / $fs;
 		margin: 0 15rem / $fs 25rem / $fs;
 		text-align: left;
 
@@ -150,7 +160,7 @@
 			vertical-align: middle;
 			background-size: cover;
 			background-position: center center;
-			height: 188rem / $fs;
+			height: 181rem / $fs;
 			width: 100%;
 		}
 

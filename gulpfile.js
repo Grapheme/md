@@ -37,6 +37,7 @@ gulp.task('server', function() {
 gulp.task('scripts', function() {
   return gulp.src([
   		'bower_components/jquery/dist/jquery.min.js',
+  		'bower_components/bxslider-4/dist/jquery.bxslider.min.js',
   		app_path + '/scripts/main.js'])
     .pipe(concat('main.concat.js'))
     .pipe(gulp.dest(build_path + '/scripts/'))
@@ -46,7 +47,8 @@ gulp.task('scripts', function() {
 gulp.task('wiredep', function () {
 	return gulp.src([
 			'bower_components/cropper/dist/cropper.css',
-			'bower_components/fancybox/source/jquery.fancybox.css'
+			'bower_components/fancybox/source/jquery.fancybox.css',
+            'bower_components/bxslider-4/dist/jquery.bxslider.css',
 			])
 	  .pipe(concat('vendor.css'))
 	  .pipe(gulp.dest(build_path + '/styles/'))

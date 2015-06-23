@@ -594,6 +594,23 @@ html {
 .clearfix {
   display: block; }
 
+.bx-wrapper {
+  height: 100%;
+  box-shadow: none;
+  border: none; }
+  .bx-wrapper .bx-viewport {
+    height: 100% !important; }
+    .bx-wrapper .bx-viewport .bxslider {
+      height: 100%; }
+      .bx-wrapper .bx-viewport .bxslider > li {
+        height: 100%; }
+  .bx-wrapper .bx-pager.bx-default-pager {
+    bottom: 30px; }
+    .bx-wrapper .bx-pager.bx-default-pager a {
+      background: white; }
+      .bx-wrapper .bx-pager.bx-default-pager a.active {
+        background: #0099c9; }
+
 .black-btn {
   height: 2.5rem;
   border: none;
@@ -620,10 +637,11 @@ html {
     position: absolute;
     top: 0;
     left: 50%;
-    margin-left: -1.125rem;
-    width: 2.25rem;
+    margin-left: -3.0625rem;
+    width: 6.125rem;
     height: 2.25rem;
-    background: url(../images/header/mobile-logo.png) 0 0/100% auto no-repeat; }
+    background: url(../images/header/mobile-logo.png) 0 0/100% auto no-repeat;
+    background: url(../images/header/logo.png) 0 0/100% auto no-repeat; }
   .header .header__top .top__menu-icon {
     display: none;
     position: absolute;
@@ -766,6 +784,8 @@ html {
         color: #00a0ce; }
       .header .header__bottom .bottom__left .left__link.red-link {
         color: #ec258b; }
+      .header .header__bottom .bottom__left .left__link:hover {
+        opacity: 0.7; }
   .header .header__bottom .bottom__right {
     position: absolute;
     display: inline-block;
@@ -861,6 +881,42 @@ html {
       width: 66.66667%; }
     .main-metro .metro__grid.grid-1 {
       width: 33.33333%; }
+      .main-metro .metro__grid.grid-1.whover .metro-cont {
+        overflow: hidden; }
+        .main-metro .metro__grid.grid-1.whover .metro-cont:before {
+          content: '';
+          display: block;
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.4);
+          left: 0;
+          top: 0;
+          opacity: 0;
+          -webkit-transform: rotate(0deg) scale(0.1) translateX(-600px) translateY(-600px);
+              -ms-transform: rotate(0deg) scale(0.1) translateX(-600px) translateY(-600px);
+                  transform: rotate(0deg) scale(0.1) translateX(-600px) translateY(-600px);
+          -webkit-transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          border-radius: 500px; }
+        .main-metro .metro__grid.grid-1.whover .metro-cont .metro__top {
+          position: relative;
+          -webkit-transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                  transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .main-metro .metro__grid.grid-1.whover .metro-cont .metro__title {
+          position: relative;
+          -webkit-transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                  transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+      .main-metro .metro__grid.grid-1.whover:hover .metro-cont:before {
+        opacity: 1;
+        -webkit-transform: rotate(0) scale(1) translateX(0) translateY(0);
+            -ms-transform: rotate(0) scale(1) translateX(0) translateY(0);
+                transform: rotate(0) scale(1) translateX(0) translateY(0);
+        border-radius: 0px; }
+      .main-metro .metro__grid.grid-1.whover:hover .metro__top {
+        color: white; }
+      .main-metro .metro__grid.grid-1.whover:hover .metro__title {
+        color: white; }
     @media (min-width: 800px) {
       .main-metro .metro__grid.metro-center {
         text-align: center; }
@@ -868,6 +924,10 @@ html {
           padding-top: 13%; }
         .main-metro .metro__grid.metro-center .metro__title {
           font-size: 5rem; } }
+    .main-metro .metro__grid.metro-center .metro__top {
+      height: auto; }
+    .main-metro .metro__grid.metro-center .metro__title {
+      margin-top: 0; }
     .main-metro .metro__grid.metro-promo .metro-cont:before {
       content: "";
       position: absolute;
@@ -1043,7 +1103,7 @@ html {
   html {
     font-size: 16px; }
   body {
-    padding-top: 2.25rem; }
+    padding-top: 2.75rem; }
   .header .header__top {
     position: fixed;
     top: 0;

@@ -1,0 +1,25 @@
+.bx-wrapper {
+    height: 100%;
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border: none;
+    .bx-viewport {
+        height: 100% !important;
+        .bxslider {
+            height: 100%;
+            &>li {
+              height: 100%;  
+            }
+        }
+    }
+    .bx-pager.bx-default-pager {
+        bottom: 30px;
+        a {
+            background: white;
+            &.active {
+                background: #0099c9;
+            }
+        }
+    }
+}

@@ -21,6 +21,49 @@
 
 		&.grid-1 {
 			width: (100/3)+%;
+            &.whover {
+                .metro-cont {
+                    overflow: hidden;
+                    &:before {
+                        content: '';
+                        display: block;
+                        position: absolute;
+                        width: 100%;
+                        height: 100%;
+                        background: rgba(black, 0.4);
+                        left: 0;
+                        top: 0;
+                        opacity: 0;
+                        transform: rotate(0deg) scale(0.1) translateX(-600px) translateY(-600px);
+                        //transform-origin: top left;
+                        transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                        border-radius: 500px;
+                    }
+                    .metro__top {
+                        position: relative;
+                        transition: all 300ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    }
+                    .metro__title {
+                        position: relative;
+                        transition: all 400ms cubic-bezier(0.25, 0.46, 0.45, 0.94);
+                    }
+                }
+                &:hover {
+                    .metro-cont {
+                        &:before {
+                            opacity: 1;
+                            transform: rotate(0) scale(1) translateX(0) translateY(0);
+                            border-radius: 0px;
+                        }
+                    }
+                    .metro__top {
+                        color: white;
+                    }
+                    .metro__title {
+                        color: white;
+                    }
+                }
+            }
 		}
 
 		&.metro-center {
@@ -35,6 +78,12 @@
 					font-size: 80rem / $fs;
 				}
 			}
+            .metro__top {
+                height: auto;
+            }
+            .metro__title {
+                margin-top: 0;
+            }
 		}
 
 		&.metro-promo {

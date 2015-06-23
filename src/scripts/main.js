@@ -16,9 +16,16 @@ Modis.Mobile.menu = function() {
 		return false;
 	});
 }
+
+Modis.slider = function() {
+    $('.bxslider').bxSlider();
+}
+
 Modis.Mobile.init = function() {
 	this.menu();
 }
+
 $(function(){
 	Modis.Mobile.init();
+    Modis.slider();
 });

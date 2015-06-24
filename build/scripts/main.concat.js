@@ -32,9 +32,9 @@ Modis.Mobile.menu = function() {
 }
 
 Modis.slider = function() {
-    $('.bxslider').bxSlider({
-      auto: true
-    });
+  $('.bxslider').bxSlider({
+    auto: true
+  });
 }
 
 Modis.Mobile.init = function() {

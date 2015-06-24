@@ -709,8 +709,8 @@ html {
         vertical-align: middle;
         top: -.1em;
         height: 1.5rem;
-        width: 1.5rem;
-        background: url(../images/header/cart.png) 0 0/100% auto no-repeat; }
+        width: 1.125rem;
+        background: url(../images/header/bag.svg) 0 0/100% auto no-repeat; }
       .header .header__top .top__right .right__cart .cart__count {
         margin-left: 5px;
         color: #00a0d0;
